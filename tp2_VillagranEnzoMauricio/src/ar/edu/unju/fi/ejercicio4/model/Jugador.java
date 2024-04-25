@@ -70,8 +70,9 @@ public class Jugador {
 	}
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + nombre + ", apellido=" + apellido + ", nacionalidad=" + nacionalidad + ", estatura="
-				+ estatura + ", peso=" + peso + ", posicion=" + posicion + ", fechaNacimiento=" + fechaNacimiento + "]";
+		return "Nombre: " + nombre + " - Apellido: " + apellido + "\nNacionalidad: " + nacionalidad + "\nEstatura: "
+				+ estatura + " m - Peso: " + peso + " kg\nPosicion: " + posicion + "\nFecha nacimiento: " + fechaNacimiento + " - Edad: " + calcularEdad() 
+				+" años";
 	}
 	public int calcularEdad() {
 		LocalDate hoy = LocalDate.now();
