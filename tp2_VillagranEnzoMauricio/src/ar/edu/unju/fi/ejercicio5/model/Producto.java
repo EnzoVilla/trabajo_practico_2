@@ -1,11 +1,11 @@
-package ar.edu.unju.fi.ejercicio1.model;
-
+package ar.edu.unju.fi.ejercicio5.model;
 public class Producto {
 	private String codigo;
 	private String descripcion;
 	private float precioUnitario;
 	private OrigenFabricacion origenFabricacion;
 	private Categoria categoria;
+	private boolean estado;
 	public enum OrigenFabricacion{
 		ARGENTINA,CHINA,BRASIL,URUGUAY;
 	}
@@ -16,12 +16,13 @@ public class Producto {
 		// TODO Auto-generated constructor stub
 	}
 	public Producto(String codigo, String descripcion, float precioUnitario, OrigenFabricacion origenFabricacion,
-			Categoria categoria) {
+			Categoria categoria, boolean estado) {
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.precioUnitario = precioUnitario;
 		this.origenFabricacion = origenFabricacion;
 		this.categoria = categoria;
+		this.estado = estado;
 	}
 	public String getCodigo() {
 		return codigo;
@@ -53,9 +54,15 @@ public class Producto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	@Override
-	public String toString() {
-		return "----- Producto -----\nCodigo: " + codigo + " - Descripcion: " + descripcion + "\nPrecio: $" + precioUnitario
-				+ "\nOrigen: " + origenFabricacion + " - Categoria: " + categoria;
+	public boolean isEstado() {
+		return estado;
 	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+	public String mostrarProductosPto5() {
+		return "----- Producto -----\nCodigo: " + codigo + " - Descripcion: " + descripcion + "\nPrecio: $" + precioUnitario
+				+ "\nOrigen: " + origenFabricacion + " - Categoria: " + categoria + " - Stock: "+estado;
+	}
+	
 }
