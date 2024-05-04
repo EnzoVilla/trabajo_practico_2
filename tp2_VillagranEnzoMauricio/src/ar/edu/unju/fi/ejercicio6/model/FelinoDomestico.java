@@ -32,7 +32,7 @@ public class FelinoDomestico {
 	}
 	@Override
 	public String toString() {
-		return "FelinoDomestico [nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + "]";
+		return "Felino Domestico \nNombre: " + nombre + "\nEdad: " + edad + "\nPeso: " + peso;
 	}
 	
 }
